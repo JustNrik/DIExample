@@ -8,6 +8,7 @@ namespace DIExample
     class Program
     {
         private const string ConnectionString = "Some connection string"; // You may load it from a json/xml file, or an environment variable.
+        
         async void Main()
         {
                 // Initialise a ServiceCollection
