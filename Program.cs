@@ -9,7 +9,10 @@ namespace DIExample
     {
         private const string ConnectionString = "Some connection string"; // You may load it from a json/xml file, or an environment variable.
         
-        async void Main()
+        static void Main()
+            => MainAsync().GetAwaiter().GetResult();
+        
+        async static Task MainAsync()
         {
                 // Initialise a ServiceCollection
                 var serviceCollection = new ServiceCollection();
