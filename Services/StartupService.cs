@@ -6,11 +6,11 @@ using DIExample;
 [Service]
 public class StartupService
 {
-    private IServiceProvider Services;
+    private readonly IServiceProvider _services;
 
-    public StartupService(IServiceProvider Services)
+    public StartupService(IServiceProvider services)
     {
-        this.Services = Services;
+        _services = Services;
     }
 
     public async Task InitialiseAsync() // If you have multiple services, it's good to have a Startup Service
