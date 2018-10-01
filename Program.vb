@@ -11,7 +11,7 @@ Module Program
         ' Initialise a ServiceCollection
         Dim serviceCollection As New ServiceCollection 
         ' Add a Singleton to each object you want to inject in your services
-        serviceCollection.AddSingleton(New SqlConnection(ConnectionString)) 
+        serviceCollection.AddTrasient(New SqlConnection(ConnectionString)) 
         ' I do this for ease, I can tag all my services with a custom attribute so their are easier to pick up
         Dim services = AppDomain.CurrentDomain.GetAssemblies(). ' Gets the assemblies of your project
             SelectMany(Function(x) x.GetTypes).
