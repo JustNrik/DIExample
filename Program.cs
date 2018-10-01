@@ -15,7 +15,7 @@ namespace DIExample
             // Initialise a ServiceCollection
             var serviceCollection = new ServiceCollection();
             // Add a Singleton to each object you want to inject in your services
-            serviceCollection.AddSingleton(new SqlConnection(ConnectionString));
+            serviceCollection.AddTrasient(new SqlConnection(ConnectionString));
                 // I do this for ease, I can tag all my services with a custom attribute so their are easier to pick up
             var services = AppDomain.CurrentDomain.GetAssemblies()
                 .SelectMany(x => x.GetTypes())
